@@ -1,22 +1,17 @@
-function casiPalindrome(palabra){
-    var tam=palabra.length;
+function casiPalindrome(palabra) {
+    var longitud = palabra.length;
     var palindrome;
-    var count=0;
+    var conta = 0;
     
-    for(var i=0,j=tam-1;i<(tam/2),j>(tam/2);i++,j++)
-    {
-        if(palabra[i] != palabra[j])
-        {
-            count += 1;
+    for( var i=0, j=longitud-1 ; i<=(longitud/2), j>=(longitud/2) ; i++, j-- ) {
+        if ( palabra[i] != palabra[j] ) {
+            conta+=1;
         }
     }
-    if(count<=2)
-    {
-        palindrome = true;
-    }
-    else
-    {
-        palindrome = false;
-    }
-    return palindrome;
+        if (conta<=2) {
+            palindrome = true;
+        } else {
+            palindrome = false;
+        }
+        return palindrome;      
 }
